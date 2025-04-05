@@ -1,4 +1,6 @@
 {% load static %}
+{% load sass_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
         Home | Portfolio
         {% endblock %}
     </title>
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% sass_src 'assets/css/style.scss' %}">
     {% block css %}{% endblock  %}
 </head>
 <body>
@@ -17,5 +19,6 @@
     {% block content %}
     {% endblock %}
     <footer>This is footer</footer>
+
 </body>
 </html>
