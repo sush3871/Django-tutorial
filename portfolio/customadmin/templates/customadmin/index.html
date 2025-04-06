@@ -11,5 +11,21 @@
 <body>
     <h1>Admin Panel</h1>
 
+    <div class="admin-main">
+        {% for admin in admins %}
+            <div class="admin-card">
+                <img src="{{ admin.image.url }}" alt="Admin Image" style="width: 500px; height: 500px;">
+                <h2>{{ admin.name }}</h2>
+                <p>{{ admin.email }}</p>
+                <p>{{ admin.date_added }}</p>
+                <a href="{% url 'admin_detail' admin.id %}">
+                    <button>
+                        {{admin.type}} - {{admin.id}}
+                    </button>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
 </body>
 </html>

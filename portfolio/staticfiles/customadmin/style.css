@@ -1,14 +1,26 @@
 body {
   font-family: Arial, sans-serif;
-  background: #282828;
+  background: #ffffff;
   text-align: center;
   padding: 50px; }
   body h1 {
-    color: #ff0000;
+    color: #000000;
     font-size: 5vw; }
   body .container {
     background: #fff;
     padding: 20px;
     border-radius: 5px; }
+
+.admin-main {
+  display: flex; }
+
+.admin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

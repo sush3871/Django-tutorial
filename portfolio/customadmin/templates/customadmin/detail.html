@@ -1,0 +1,23 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin detail</title>
+    <link rel="stylesheet" href="{% sass_src  'customadmin/style.scss' %}">
+</head>
+<body>
+    <h1>Admin detailss</h1>
+
+    <div class="admin-main">
+        <div class="admin-card">
+            <img src="{{ admin.image.url }}" alt="Admin Image" style="width: 500px; height: 500px;">
+            <h2>{{ admin.name }}</h2>
+            <p>{{ admin.description }}</p>
+        </div>
+    </div>
+
+</body>
+</html>
