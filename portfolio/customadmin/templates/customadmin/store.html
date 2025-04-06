@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>For Forms</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if Admin_review.objects.all %}
+        <h1>Admin Reviews</h1>
+        <ul>
+            {% for review in Admin_review.objects.all %}
+                <li>{{ review.name }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
+
+
